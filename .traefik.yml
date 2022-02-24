@@ -1,11 +1,9 @@
-displayName: Demo Plugin
+displayName: HelloWorld Plugin
 type: middleware
 
-import: github.com/traefik/plugindemo
+import: github.com/NSObjects/helloword
 
-summary: '[Demo] Add Request Header'
+summary: '用于请求响应计时'
 
 testData:
-  Headers:
-    X-Demo: test
-    X-URL: '{{URL}}'
+  log: true

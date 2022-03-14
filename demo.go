@@ -15,7 +15,7 @@ type Config struct {
 
 // CreateConfig creates the default plugin configuration.
 func CreateConfig() *Config {
-	return &Config{}
+	return &Config{Log: true}
 }
 
 // Demo a Demo plugin.
@@ -27,7 +27,6 @@ type Demo struct {
 
 // New created a new Demo plugin.
 func New(ctx context.Context, next http.Handler, config *Config, name string) (http.Handler, error) {
-
 	return &Demo{
 		next: next,
 		name: name,
